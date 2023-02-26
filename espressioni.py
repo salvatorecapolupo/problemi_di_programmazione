@@ -90,3 +90,39 @@ a = 1.1 + 2.2
 valore_atteso = 3.3
 tol = 0.00001
 print ( abs(a - valore_atteso) < tol ) # attenzione ...pure qui 
+
+# esercizio 18 
+num1 = input('Enter the first number: ')
+num2 = input('Enter the second number: ')
+
+sum = int(num1) + int(num2)
+sub = int(num1) - int(num2)  
+mul = float(num1) * float(num2)  
+div = float(num1) / float(num2) 
+
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+print('The subtration of {0} and {1} is {2}'.format(num1, num2, sub))
+print('The multiplication of {0} and {1} is {2}'.format(num1, num2, mul))  
+print('The division of {0} and {1} is {2}'.format(num1, num2, div))
+
+# esercizio 19: pari o dispari
+num1 = input("Enter a number: ") 
+if (int(num1) % 2) == 0:  
+   print("{0} is Even number".format(num1))  
+else:  
+   print("{0} is Odd number".format(num1)) 
+    
+#esercizio 20 - numeri primi
+def PrimeChecking(num):  
+    if num > 1:  
+        for i in range(2, int(num/2) + 1):  
+            if (num % i) == 0:  
+                print("The number ",num, "is not a prime number")  
+                break  
+        else:  
+            print("The number ",num, "is a prime number")  
+    else:  
+        print("The number ",num, "is not a prime number")  
+num = int(input("Enter a number to check prime or not: "))  
+
+PrimeChecking(num)
